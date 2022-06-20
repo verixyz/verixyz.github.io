@@ -2,18 +2,25 @@
 
 Verixyz is a JavaScript framework that makes it easy to use cryptographically verifiable data in their applications. It was designed to make it easy for developers who want to use DIDs, verifiable credentials, and data-centric protocols to bring next-generation features to their users.
 
-## Basics
+## Basics Concepts
 - [Verifiable Data](./docs/verifiabledata.md)
 - [Identifiers](./docs/indentifiers.md)
-- [Signing & Keys](./docs/sign-keys.md)
+- [Signs and Keys](./docs/sign-keys.md)
 
-## Verixyz Agent
-## Development Tools
+## Verixyz Basics
+- [Verixyz DID Agent](./docs/didagent.md)
+- [Plugins](./docs/plugins.md)
+- [DID Metholds](./docs/didmetholds.md)
+- [Messages](./docs/messages.md)
+- [Selective Disclosure Request](./docs/sdr.md)
+- [Event System](./docs/eventsystems.md)
+- [YAML Configuration](./docs/yamlconfig.md)
 
 ## Tutorials
-- Node
-
+See a Node Tutorial on the [github].
 ## Depolyment Tutorials
+TBD.
+
 
 
 
