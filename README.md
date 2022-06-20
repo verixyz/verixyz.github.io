@@ -17,7 +17,7 @@ Verixyz is a JavaScript framework that makes it easy to use cryptographically ve
 - [YAML Configuration](./docs/yamlconfig.md)
 
 ## Tutorials
-See a Node Tutorial on the [verixyz github](https://github.io/verixyz).
+See a Node Tutorial on the [verixyz github](https://github.com/verixyz/tutorials).
 ## Depolyment Tutorials
 TBD.
 
