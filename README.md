@@ -4,7 +4,7 @@ Verixyz is a JavaScript framework that makes it easy to use cryptographically ve
 
 ## Basics Concepts
 - [Verifiable Data](./docs/verifiabledata.md)
-- [Identifiers](./docs/indentifiers.md)
+- [Identifiers](./docs/identifiers.md)
 - [Signs and Keys](./docs/sign-keys.md)
 
 ## Verixyz Basics
@@ -17,7 +17,7 @@ Verixyz is a JavaScript framework that makes it easy to use cryptographically ve
 - [YAML Configuration](./docs/yamlconfig.md)
 
 ## Tutorials
-See a Node Tutorial on the [github].
+See a Node Tutorial on the [verixyz github](https://github.io/verixyz).
 ## Depolyment Tutorials
 TBD.
 
