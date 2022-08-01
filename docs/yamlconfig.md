@@ -25,25 +25,25 @@ Objects are created by a helper function `createObjects`, which recursively muta
 ## Requiring npm modules
 This:
 ```js
-import { Agent } from '@veramo/core'
-import { DIDComm } from '@veramo/did-comm'
+import { Agent } from '@verixyz/core'
+import { DIDComm } from '@verixyz/did-comm'
 const agent = new Agent({
   plugins: [new DIDComm()],
 })
 ```
 is equivalent to:
 ```js
-const agent = new (require('@veramo/core')['Agent'])({
-  plugins: [new (require('@veramo/core')['DIDComm'])()],
+const agent = new (require('@verixyz/core')['Agent'])({
+  plugins: [new (require('@verixyz/core')['DIDComm'])()],
 })
 ```
 which is equivalent to:
 ```yaml
 agent:
-  $require: '@veramo/core#Agent'
+  $require: '@verixyz/core#Agent'
   $args:
     - plugins:
-        - $require: '@veramo/did-comm#DIDComm'
+        - $require: '@verixyz/did-comm#DIDComm'
 ```
 
 ### $require syntax
@@ -89,18 +89,18 @@ const result = obj.ethr
 ### Referencing objects ( $ref )
 ```yaml
 agent:
-  $require: '@veramo/core#Agent'
+  $require: '@verixyz/core#Agent'
   $args:
     - plugins:
-        - $require: '@veramo/did-comm#DIDComm'
+        - $require: '@verixyz/did-comm#DIDComm'
 ```
 is equivalent to:
 ```yaml
 didComm:
-  $require: '@veramo/did-comm#DIDComm'
+  $require: '@verixyz/did-comm#DIDComm'
 
 agent:
-  $require: '@veramo/core#Agent'
+  $require: '@verixyz/core#Agent'
   $args:
     - plugins:
         - $ref: /didComm
@@ -115,17 +115,17 @@ dbConnection:
       database:
         $env: 'DATABASE_FILE'
       entities:
-        $require: '@veramo/data-store?t=object#Entities'
+        $require: '@verixyz/data-store?t=object#Entities'
 
 agent:
-  $require: '@veramo/core#Agent'
+  $require: '@verixyz/core#Agent'
   $args:
     - schemaValidation: false
       plugins:
-        - $require: '@veramo/data-store#DataStore'
+        - $require: '@verixyz/data-store#DataStore'
           $args:
             - $ref: /dbConnection
-        - $require: '@veramo/data-store#DataStoreORM'
+        - $require: '@verixyz/data-store#DataStoreORM'
           $args:
             - $ref: /dbConnection
 ```
@@ -142,14 +142,14 @@ server:
     - - $require: 'cors?t=function'
 
     # Add agent to the request object
-    - - $require: '@veramo/remote-server?t=function#RequestWithAgentRouter'
+    - - $require: '@verixyz/remote-server?t=function#RequestWithAgentRouter'
         $args:
           - agent:
               $ref: /agent
 
   # Execute during server initialization
   init:
-    - $require: '@veramo/remote-server?t=function#createDefaultDid'
+    - $require: '@verixyz/remote-server?t=function#createDefaultDid'
       $args:
         - agent:
             $ref: /agent
