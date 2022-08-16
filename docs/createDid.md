@@ -62,6 +62,8 @@ DIDs are a new type of identifier that are not necessary for verifiable credenti
 
 A portable URL-based identifier, also known as a DID, associated with an entity. These identifiers are most often used in a verifiable credential and are associated with subjects such that a verifiable credential itself can be easily ported from one repository to another without the need to reissue the credential. An example of a DID is `did:example:123456abcdef`.
 
+For details about did, [W3C did-primer](https://w3c-ccg.github.io/did-primer/) is a good start point.
+
 ## Decentralized identifier document
 Also referred to as a DID document, this is a document that is accessible using a verifiable data registry and contains information related to a specific `did`, such as the associated repository and public key information.
 
